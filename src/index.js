@@ -8,8 +8,10 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className="container">
     <App />
     <Footing />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
