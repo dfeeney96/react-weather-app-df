@@ -1,3 +1,68 @@
 .Weather {
-  color: white;
+  color: #091035;
+}
+
+.Weather .button {
+  background: #ebd9fc;
+  border: 1.5px solid #091035;
+  border-radius: 5px;
+  height: 30px;
+  transition: all 200ms ease-in-out;
+  width: 40px;
+}
+
+.Weather .button:hover {
+  background: #949cdf;
+  border: 1.5px solid #091035;
+  cursor: pointer;
+}
+
+.Weather .caption {
+  padding: 10px 0px 0px;
+  text-align: right;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.Weather img {
+  height: 100px;
+  padding: 10px;
+  position: relative;
+  top: -25px;
+  left: -15px;
+}
+
+.Weather .pin {
+  position: relative;
+  top: -30px;
+  left: 400px;
+}
+
+.Weather .search {
+  width: 360px;
+}
+
+.Weather .temperature {
+  font-size: 40px;
+}
+
+.Weather ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px 30px 30px;
+}
+
+.Weather .update-time {
+  position: relative;
+  top: -25px;
+  left: 3px;
+}
+
+.Weather .weather-report {
+  padding: 0px 5px;
+}
+
+.form {
+  padding: 0px;
+  margin: 0 px;
 }

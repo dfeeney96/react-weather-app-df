@@ -5,12 +5,17 @@ export default function Weather (){
         <div className="Weather">
         
             <form className="search-tool">
-                <input type="search" placeholder="Type a city..." />
-                <input type="submit" value="🔍" />
+                <input type="search" placeholder="Type a city..." autofocus="yes" className="search"/>
+                <input type="submit" value="🔍" className="button"/>
             </form>
-            <button className="current-location">📍</button>
-            <br/>
-            <div className="weather-report">
+            <button className="button pin">📍</button>
+              <p className="update-time">
+        Last Updated: Sunday 24 January 16:54
+    </p>
+       
+            <div className="weather-report">      
+          
+
 <h1> London </h1>
 
 <div className="row">
@@ -21,19 +26,22 @@ export default function Weather (){
     </div> 
     <div className="col-6">
         <div className="row">
-            <div className="col-6">
-    <h2>
-    6C
+            <div className="col-1">
+    <h2 className="temperature">
+    6
     </h2>
     </div>
+    
+    <div className="col-1">
+ <p>C|F</p>
+ </div>
+  
+ </div>
+ 
+    </div>
+    </div>
+    </div>
     <div className="col-6">
- <a href="/">C</a> | <a href="/">F</a>
- </div>
- </div>
-    </div>
-    </div>
-    </div>
-    <div className="col-4">
     <ul>
         <li>
             Sunny
@@ -47,10 +55,11 @@ export default function Weather (){
     </ul>
  </div>
  </div>
-<h3>
+  </div>
+<h3 className="caption">
     Have a sun-derful day!
 </h3>
-            </div>
+           
             </div>
             
 

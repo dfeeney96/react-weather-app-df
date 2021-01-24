@@ -1,13 +1,10 @@
 .App {
-  background: #061239;
-  border: 2px solid #d264b6;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  border: 2px solid #012e33;
   border-radius: 5px;
-  color: #d264b6;
   display: block;
-  margin: 0 auto;
-}
-
-.greeting {
-  font-size: large;
-  text-align: center;
+  font-family: "Sofia", cursive;
+  margin: 30px auto 0px;
+  max-width: 550px;
+  padding: 30px;
 }
