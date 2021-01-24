@@ -43,9 +43,10 @@ export default function Weather (){
     </div>
     <div className="col-6">
     <ul>
-        <li>
+        <li className = "weather-description">
             Sunny
         </li>
+  
         <li>
             Wind Speed: 5mph
         </li>

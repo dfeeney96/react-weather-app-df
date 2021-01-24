@@ -49,6 +49,8 @@
 .Weather ul {
   list-style: none;
   padding: 0px;
+  position: relative;
+  top: -25px;
   margin: 0px 30px 30px;
 }
 
@@ -58,11 +60,10 @@
   left: 3px;
 }
 
-.Weather .weather-report {
-  padding: 0px 5px;
+.Weather .weather-description {
+  margin-bottom: 10px;
 }
 
-.form {
-  padding: 0px;
-  margin: 0 px;
+.Weather .weather-report {
+  padding: 0px 5px;
 }
