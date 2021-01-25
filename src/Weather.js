@@ -1,6 +1,33 @@
+import React, { useState } from "react";
+import axios from "axios";
+
 import "./Weather.css";
 
-export default function Weather (){
+
+export default function Weather (props){
+
+   
+const [loaded, setLoaded]=useState(false);
+const [weatherReport, setweatherReport]=useState(null);
+
+
+
+
+function handleSubmit(response){
+setweatherReport({
+     description: response.data.weather[0].description,
+     humidity: response.data.main.humidity,
+    temperature: Math.round(response.data.main.temp),
+    tempFeels: Math.round(response.data.main.feels_like),
+    windSpeed: Math.round(response.data.wind.speed)
+})
+
+    console.log(response);
+     setLoaded(true);
+}    
+
+
+if (loaded) {
     return(
         <div className="Weather">
         
@@ -14,9 +41,8 @@ export default function Weather (){
     </p>
        
             <div className="weather-report">      
-          
 
-<h1> London </h1>
+<h1> Liverpool </h1>
 
 <div className="row">
     <div className="col-4">
@@ -28,7 +54,7 @@ export default function Weather (){
         <div className="row">
             <div className="col-1">
     <h2 className="temperature">
-    6
+    {weatherReport.temperature}
     </h2>
     </div>
     
@@ -43,15 +69,20 @@ export default function Weather (){
     </div>
     <div className="col-6">
     <ul>
-        <li className = "weather-description">
-            Sunny
+        <li className = "weather-description text-capitalize">
+            <strong>{weatherReport.description}</strong>
+           
         </li>
   
         <li>
-            Wind Speed: 5mph
+            Wind Speed: 
+            {weatherReport.windSpeed}mph
         </li>
         <li>
-            Humidity: 68%
+            Humidity: {weatherReport.humidity}%
+        </li>
+        <li>
+            Feels Like: {weatherReport.tempFeels}°C
         </li>
     </ul>
  </div>
@@ -66,5 +97,23 @@ export default function Weather (){
 
 
     )
+
+} else {
+
+
+const apiKey = "f15c99b37dfa1cbb83fb8a2b0c300b09";
+const city = "Liverpool";
+const units = "metric";
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+axios.get(apiUrl).then(handleSubmit);
+
+return(
+
+<h1>    Loading... </h1>
+
+)
+
+}
 
 }
