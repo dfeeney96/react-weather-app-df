@@ -42,17 +42,17 @@ if (loaded) {
        
             <div className="weather-report">      
 
-<h1> Liverpool </h1>
+<h1> {props.city} </h1>
 
 <div className="row">
-    <div className="col-4">
+    <div className="col-6">
         <div className="row">
             <div className="col-6">
     <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun" />
     </div> 
     <div className="col-6">
         <div className="row">
-            <div className="col-1">
+            <div className="col-4">
     <h2 className="temperature">
     {weatherReport.temperature}
     </h2>
@@ -102,7 +102,7 @@ if (loaded) {
 
 
 const apiKey = "f15c99b37dfa1cbb83fb8a2b0c300b09";
-const city = "Liverpool";
+const city = props.city;
 const units = "metric";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
