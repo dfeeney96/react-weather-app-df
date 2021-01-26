@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import FormattedDate from "./FormattedDate";
+
 import "./Weather.css";
 
 
@@ -15,6 +17,7 @@ const [weatherReport, setweatherReport]=useState(null);
 
 function handleSubmit(response){
 setweatherReport({
+    date: new Date(response.data.dt*1000),
      description: response.data.weather[0].description,
      humidity: response.data.main.humidity,
     temperature: Math.round(response.data.main.temp),
@@ -28,6 +31,7 @@ setweatherReport({
 
 
 if (loaded) {
+   
     return(
         <div className="Weather">
         
@@ -37,34 +41,31 @@ if (loaded) {
             </form>
             <button className="button pin">📍</button>
               <p className="update-time">
-        Last Updated: Sunday 24 January 16:54
+        Last Updated: <FormattedDate date={weatherReport.date} />
     </p>
        
             <div className="weather-report">      
 
-<h1> {props.city} </h1>
+<span className="city"> {props.city} </span> 
 
-<div className="row">
-    <div className="col-6">
-        <div className="row">
-            <div className="col-6">
+  <span className="toggle"> C|F </span>
+ 
+
+
+<div className="row ">
+    <div className="col-6 ">
+        <div className="row ">
+            <div className="col-6 ">
     <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun" />
     </div> 
-    <div className="col-6">
-        <div className="row">
-            <div className="col-4">
-    <h2 className="temperature">
-    {weatherReport.temperature}
-    </h2>
-    </div>
-    
-    <div className="col-1">
- <p>C|F</p>
+    <div className="col-6">    
+    <span className="temperature">
+ {weatherReport.temperature}  
+    </span>
+    <span className="unit">°C </span>
  </div>
   
- </div>
  
-    </div>
     </div>
     </div>
     <div className="col-6">
@@ -88,6 +89,7 @@ if (loaded) {
  </div>
  </div>
   </div>
+
 <h3 className="caption">
     Have a sun-derful day!
 </h3>

@@ -24,6 +24,9 @@
   font-weight: bold;
 }
 
+.Weather .city {
+  font-size: 55px;
+}
 .Weather img {
   height: 135px;
   padding: 10px;
@@ -43,9 +46,22 @@
 }
 
 .Weather .temperature {
-  font-size: 95px;
+  font-size: 50px;
+}
+
+.Weather .toggle {
+  font-size: 15px;
+  font-weight: bolder;
+
   position: relative;
-  top: -15px;
+  bottom: 25px;
+}
+
+.Weather .unit {
+  font-size: 25px;
+  position: relative;
+  bottom: 25px;
+  right: 5px;
 }
 
 .Weather ul {
