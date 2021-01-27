@@ -1,5 +1,6 @@
 .Weather {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(-225deg, #fffeff 0%, #fff2f2 100%);
+  background-blend-mode: screen;
   border: 2px solid #012e33;
   color: #091035;
   border-radius: 5px;
@@ -25,28 +26,23 @@
 }
 
 .Weather .caption {
-  padding: 10px 0px 0px;
+  padding: 0px 30px 30px;
   text-align: right;
   font-style: italic;
   font-weight: bold;
 }
 
 .Weather .city {
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .Weather .heading {
-  background-image: linear-gradient(
-    45deg,
-    #ff9a9e 0%,
-    #fad0c4 99%,
-    #fad0c4 100%
-  );
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
   border: 1px solid #ef999a;
-  padding: 30px;
+  padding: 30px 40px;
   margin: 0;
   height: 120px;
-  width: %;
+  width: 100%;
 }
 
 .Weather img {
@@ -105,5 +101,5 @@
 }
 
 .Weather .weather-report {
-  padding: 30px 30px;
+  padding: 10px 40px;
 }
