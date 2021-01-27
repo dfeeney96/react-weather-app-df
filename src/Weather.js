@@ -6,6 +6,7 @@ import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 
+
 export default function Weather (props){
 
    
@@ -34,7 +35,8 @@ if (loaded) {
    
     return(
         <div className="Weather">
-        
+<header className = "heading">
+
             <form className="search-tool">
                 <input type="search" placeholder="Type a city..." autofocus="yes" className="search"/>
                 <input type="submit" value="🔍" className="button"/>
@@ -43,14 +45,14 @@ if (loaded) {
               <p className="update-time">
         Last Updated: <FormattedDate date={weatherReport.date} />
     </p>
-       
+ 
+    </header>
             <div className="weather-report">      
 
 <span className="city"> {props.city} </span> 
 
   <span className="toggle"> C|F </span>
  
-
 
 <div className="row ">
     <div className="col-6 ">
@@ -88,11 +90,12 @@ if (loaded) {
     </ul>
  </div>
  </div>
-  </div>
+
 
 <h3 className="caption">
     Have a sun-derful day!
 </h3>
+  </div>
            
             </div>
             
