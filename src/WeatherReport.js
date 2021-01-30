@@ -1,4 +1,5 @@
  import React from "react";
+ import Icon from "./Icon.js";
 
  export default function WeatherReport(props){
      return(
@@ -14,7 +15,7 @@
     <div className="col-6 ">
         <div className="row ">
             <div className="col-6 ">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun" />
+    <Icon code={props.data.icon} />
     </div> 
     <div className="col-6">    
     <span className="temperature">

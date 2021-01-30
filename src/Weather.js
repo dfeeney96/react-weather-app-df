@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import Caption from "./Caption";
 import FormattedDate from "./FormattedDate";
 import WeatherReport from "./WeatherReport";
 
@@ -15,14 +16,13 @@ const [loaded, setLoaded]=useState(false);
 const [weatherReport, setweatherReport]=useState(null);
 
 
-
-
 function retrieveData(response){
 setweatherReport({
     city: response.data.name,
     date: new Date(response.data.dt*1000),
      description: response.data.weather[0].description,
      humidity: response.data.main.humidity,
+     icon: response.data.weather[0].icon,
     temperature: Math.round(response.data.main.temp),
     tempFeels: Math.round(response.data.main.feels_like),
     windSpeed: Math.round(response.data.wind.speed)
@@ -71,14 +71,11 @@ if (loaded) {
           
 <WeatherReport data={weatherReport}  className="weather-report" />
 
-<h3 className="caption">
-    Have a sun-derful day!
-</h3>
+<Caption code={weatherReport.icon} className= "caption" />
+  
  
            
             </div>
-            
-
 
     )
 
