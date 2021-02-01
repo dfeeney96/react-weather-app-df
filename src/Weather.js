@@ -71,10 +71,7 @@ if (loaded) {
           
 <WeatherReport data={weatherReport}  className="weather-report" />
 
-<Caption code={weatherReport.icon}  />
-  
- 
-           
+<Caption code={weatherReport.icon}  />   
             </div>
 
     )

@@ -11,14 +11,14 @@
     <span className="city">  {props.data.city}</span> 
      </div> 
 
-  
+  < br />
 <div className="row ">
     <div className="col-6 ">
         <div className="row ">
-            <div className="col-5 ">
+            <div className="col-4 ">
     <Icon code={props.data.icon} />
     </div> 
-    <div className="col-5">    
+    <div className="col-8">    
     <Temperature celsius={props.data.temperature} />
  </div>
  
