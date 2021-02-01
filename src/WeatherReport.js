@@ -1,5 +1,6 @@
  import React from "react";
  import Icon from "./Icon.js";
+ import Temperature from "./Temperature.js";
 
  export default function WeatherReport(props){
      return(
@@ -7,25 +8,19 @@
  <div className="weather-report">      
 
 <div>
-    <span className="city">  {props.data.city}</span> <span className="toggle"> C|F </span>
+    <span className="city">  {props.data.city}</span> 
      </div> 
 
   
- 
-
 <div className="row ">
     <div className="col-6 ">
         <div className="row ">
-            <div className="col-6 ">
+            <div className="col-5 ">
     <Icon code={props.data.icon} />
     </div> 
-    <div className="col-6">    
-    <span className="temperature">
- {props.data.temperature}
-    </span>
-    <span className="unit">°C </span>
+    <div className="col-5">    
+    <Temperature celsius={props.data.temperature} />
  </div>
-  
  
     </div>
     </div>
