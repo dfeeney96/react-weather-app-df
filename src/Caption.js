@@ -25,6 +25,6 @@ export default function Caption (props){
     };
 
     return(
-    <h3>{codemapping[props.code]}</h3>
+    <h3 className= "caption">{codemapping[props.code]}</h3>
     )
 }

@@ -6,9 +6,11 @@
  
  <div className="weather-report">      
 
-<span className="city">  {props.data.city} </span> 
+<div>
+    <span className="city">  {props.data.city}</span> <span className="toggle"> C|F </span>
+     </div> 
 
-  <span className="toggle"> C|F </span>
+  
  
 
 <div className="row ">
