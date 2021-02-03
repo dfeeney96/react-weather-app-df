@@ -1,4 +1,5 @@
  import React from "react";
+ import Caption from "./Caption";
  import Icon from "./Icon.js";
  import Temperature from "./Temperature.js";
 
@@ -43,6 +44,7 @@
     </ul>
  </div>
 </div>
+<Caption code={props.data.icon}  />   
 </div>
 
 

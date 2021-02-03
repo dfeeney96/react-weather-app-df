@@ -26,7 +26,7 @@
 }
 
 .Weather .caption {
-  padding: 0px 30px 30px;
+  padding: 0px 30px 10px;
   text-align: right;
   font-style: italic;
   font-weight: bold;
@@ -34,6 +34,23 @@
 
 .Weather .city {
   font-size: 45px;
+}
+
+.Weather .forecast-button {
+  background: #ebd9fc;
+  border: 1.5px solid #091035;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.Weather .forecast-button:hover {
+  background: #949cdf;
+  border: 1.5px solid #091035;
+  cursor: pointer;
 }
 
 .Weather .heading {
@@ -84,7 +101,7 @@
   padding: 0px;
   position: relative;
   top: -25px;
-  margin: 0px 30px 30px;
+  margin: 0px 30px 0px;
 }
 
 .Weather .update-time {
@@ -98,5 +115,5 @@
 }
 
 .Weather .weather-report {
-  padding: 10px 40px;
+  padding: 20px 40px;
 }

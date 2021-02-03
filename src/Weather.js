@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Caption from "./Caption";
+
 import FormattedDate from "./FormattedDate";
 import WeatherReport from "./WeatherReport";
 
@@ -85,17 +85,25 @@ if (loaded) {
             </form>
                   <button className="button pin" onClick={handleClick}>📍</button>
               <p className="update-time">
-        Last Updated: <FormattedDate date={weatherReport.date} />
+       Last Refreshed: <FormattedDate date={weatherReport.date} />
     </p>
 
     </header>
           
 <WeatherReport data={weatherReport}  className="weather-report" />
 
-<Caption code={weatherReport.icon}  />   
+
+
+<button class="forecast-button" data-bs-toggle="collapse" data-bs-target=".collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    See Forecast
+  </button>
+ 
+ 
             </div>
 
     )
+
+     
 
 } else {
 
