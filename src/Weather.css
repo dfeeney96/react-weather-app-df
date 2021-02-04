@@ -25,6 +25,13 @@
   cursor: pointer;
 }
 
+.Weather canvas {
+  display: block;
+  padding: 0px;
+  position: relative;
+  bottom: 5px;
+}
+
 .Weather .caption {
   padding: 0px 30px 10px;
   text-align: right;

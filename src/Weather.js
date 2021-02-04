@@ -3,7 +3,10 @@ import axios from "axios";
 
 
 import FormattedDate from "./FormattedDate";
+import WeatherForecast from "./WeatherForecast";
 import WeatherReport from "./WeatherReport";
+
+
 
 import "./Weather.css";
 
@@ -11,7 +14,7 @@ import "./Weather.css";
 
 export default function Weather (props){
 
-   const [city, setCity]= useState(props.city)
+const [city, setCity]= useState(props.city)
 const [loaded, setLoaded]=useState(false);
 const [weatherReport, setweatherReport]=useState(null);
 
@@ -97,6 +100,8 @@ if (loaded) {
 <button class="forecast-button" data-bs-toggle="collapse" data-bs-target=".collapseExample" aria-expanded="false" aria-controls="collapseExample">
     See Forecast
   </button>
+
+  <WeatherForecast city={weatherReport.city}/>
  
  
             </div>
