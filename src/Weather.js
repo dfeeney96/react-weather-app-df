@@ -97,9 +97,7 @@ if (loaded) {
 
 
 
-<button class="forecast-button" data-bs-toggle="collapse" data-bs-target=".collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    See Forecast
-  </button>
+
 
   <WeatherForecast city={weatherReport.city}/>
  

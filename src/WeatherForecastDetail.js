@@ -2,7 +2,7 @@
 
   import Icon from "./Icon";
 
-  import "./WeatherForecastDetail";
+  import "./WeatherForecastDetail.css";
 
   export default function WeatherForecastDetail (props){
 
@@ -17,18 +17,20 @@
   }
 
       return(
-          <div className="WeatherForecastDetail row">
-               <div className="col-2">
+          <div className="WeatherForecastDetail">
+              
+              
 <p>
    {hourformatting}
     </p>
 
-    </div>
+   
 <Icon code={forecast.weather[0].icon} />
 
 <p> 
     {Math.round(forecast.main.temp)}°C
 </p>
+
     </div>
       )
 

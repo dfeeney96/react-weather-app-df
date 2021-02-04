@@ -1,8 +1,14 @@
-.WeatherForecastDetail canvas {
-  display: block;
-  margin: 0 auto 10px;
+.WeatherForecastReport {
+  background: white;
+  border: solid 1px black;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px #383838;
+  margin: 20px 10px 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.WeatherForecastDetail {
-  text-align: center;
+.WeatherForecastReport canvas {
+  display: block;
+  margin: 0 auto 10px;
 }

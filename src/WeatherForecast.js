@@ -2,8 +2,11 @@ import React, {useState} from "react";
 import axios from "axios";
 import WeatherForecastDetail from"./WeatherForecastDetail";
 
+
+
 export default function WeatherForecast (props){
 
+    
     const [loaded, setLoaded] =useState(false);
     const [forecast, setForecast]=useState(null);
 
@@ -13,15 +16,30 @@ function handleForecastResponse (response){
     
 }
 
-if (loaded){
+if (loaded && props.city === forecast.city.name){
  
-console.log(forecast);
     return(
+
         <div className="WeatherForecastDetail">
+
+            <button class="forecast-button" type="button" data-toggle="collapse" data-target=".WeatherForecastReport" aria-expanded="false" aria-controls=".WeatherForecastReport">
+    See Forecast
+  </button>
+  <div className="row WeatherForecastReport">
+           
+            <div className="col-3">
       <WeatherForecastDetail  data={forecast.list[0]} />
+      </div>
+      <div className="col-3">
             <WeatherForecastDetail  data={forecast.list[1]} />
+            </div>
+            <div className="col-3">
                   <WeatherForecastDetail  data={forecast.list[3]} />
+                  </div>
+                    <div className="col-3">
                         <WeatherForecastDetail  data={forecast.list[4]} />
+                        </div>
+                        </div>
                         </div>
     )
    
