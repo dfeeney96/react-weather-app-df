@@ -6,7 +6,7 @@ export default function Footing (){
     return(
 <div className="Footing">
 
-<span> <a href="/" target="_blank" rel="noreferrer" > Open Source Code by D Feeney </a> </span>
+<span> <a href="https://github.com/dfeeney96/react-weather-app-df" target="_blank" rel="noreferrer" > Open Source Code by D Feeney </a> </span>
 <span><a href= "https://www.linkedin.com/in/danielle-feeney-2050011a5/" target="_blank" rel="noreferrer" > View Linked In</a></span>
 
 </div>

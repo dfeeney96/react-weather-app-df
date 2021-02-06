@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 
+
 import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
 import WeatherReport from "./WeatherReport";
@@ -80,10 +81,12 @@ function handleClick(event){
 if (loaded) {
    
     return(
+        
         <div className="Weather">
+
 <header className = "heading">
             <form className="search-tool" onSubmit={handleSubmit}>
-                <input type="search" placeholder="Type a city..." autofocus="yes" className="search" onChange={handleCityChange}/>
+                <input type="search" placeholder="Type a city..." autoFocus="yes" className="search" onChange={handleCityChange}/>
                 <input type="submit" value="🔍" className="button"/>
             </form>
                   <button className="button pin" onClick={handleClick}>📍</button>

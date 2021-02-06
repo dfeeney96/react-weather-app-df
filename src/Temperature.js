@@ -22,7 +22,7 @@ if (unit === "celsius") {
         <span className="temperature">
  {celsius}
     </span>
-    <span className="unit">°C | <a href="/" onClick={convertToFahrenheit} className = "toggle">F</a> </span>
+    <span className="unit">°C | <a href="/" onClick={convertToFahrenheit} className = "toggle float-right">F</a> </span>
   
     </div> 
     )

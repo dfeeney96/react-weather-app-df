@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+
 import WeatherForecastDetail from"./WeatherForecastDetail";
 
 
@@ -16,15 +17,17 @@ function handleForecastResponse (response){
     
 }
 
+
+
+
+
+
 if (loaded && props.city === forecast.city.name){
  
     return(
 
         <div className="WeatherForecastDetail">
 
-            <button class="forecast-button" type="button" data-toggle="collapse" data-target=".WeatherForecastReport" aria-expanded="false" aria-controls=".WeatherForecastReport">
-    See Forecast
-  </button>
   <div className="row WeatherForecastReport">
            
             <div className="col-3">
@@ -40,6 +43,7 @@ if (loaded && props.city === forecast.city.name){
                         <WeatherForecastDetail  data={forecast.list[4]} />
                         </div>
                         </div>
+                   
                         </div>
     )
    
@@ -51,6 +55,7 @@ return(
 
      null
     )
+
 
 }
 
