@@ -83,6 +83,7 @@
 
 .Weather .temperature {
   font-size: 50px;
+  margin-left: 15px;
   position: relative;
   right: 10px;
   bottom: 15px;
@@ -92,7 +93,6 @@
   color: #ef999a;
   font-size: 25px;
   position: relative;
-  bottom: 48px;
 }
 
 .Weather .unit {

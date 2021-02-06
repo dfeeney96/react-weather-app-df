@@ -77,7 +77,6 @@ function handleClick(event){
 }
 
 
-
 if (loaded) {
    
     return(
@@ -97,7 +96,6 @@ if (loaded) {
     </header>
           
 <WeatherReport data={weatherReport}  className="weather-report" />
-
 
 
 

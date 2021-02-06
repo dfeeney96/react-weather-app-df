@@ -16,10 +16,10 @@
 <div className="row ">
     <div className="col-6 ">
         <div className="row ">
-            <div className="col-4 ">
+            <div className="col-3 ">
     <Icon code={props.data.icon} />
     </div> 
-    <div className="col-8">    
+    <div className="col-9">    
     <Temperature celsius={props.data.temperature} />
  </div>
  
